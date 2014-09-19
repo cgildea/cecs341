@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/User/dev/cecs341-2/temp_isim_beh.exe" -prj "C:/Users/User/dev/cecs341-2/temp_beh.prj" "work.temp" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/User/dev/cecs341/cecs341-2/temp_isim_beh.exe" -prj "C:/Users/User/dev/cecs341/cecs341-2/temp_beh.prj" "work.temp" "work.glbl" 
