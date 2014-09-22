@@ -19,18 +19,18 @@ module ALUControlTB;
 
 	initial begin
 		// Initialize Inputs
-		ALUOp = 0;
-		FuncCode = 0;
+		ALUOp = 2'b10;
+		FuncCode = 6'b000111;
 
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
-		#100 FuncCode = 5'b100000;
-		#100 FuncCode = 5'b100010; 
-		#100 FuncCode = 5'b100100;
-		#100 FuncCode = 5'b100101; 
-		#100 FuncCode = 5'b101010;
+		#100 FuncCode = 6'b100000;
+		#100 FuncCode = 6'b100010; 
+		#100 FuncCode = 6'b100100;
+		#100 FuncCode = 6'b100101; 
+		#100 FuncCode = 6'b101010;
 
 	end
       

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/User/dev/cecs341/ALUControl/ALUControlTB_isim_beh.exe" -prj "C:/Users/User/dev/cecs341/ALUControl/ALUControlTB_beh.prj" "work.ALUControlTB" "work.glbl" 
