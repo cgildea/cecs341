@@ -8,13 +8,13 @@ module ALUControlTB;
 	reg [5:0] FuncCode;
 
 	// Outputs
-	wire [3:0] ALUCtl;
+	wire [3:0] ALUctl;
 
 	// Instantiate the Unit Under Test (UUT)
 	ALUControl uut (
 		.ALUOp(ALUOp), 
 		.FuncCode(FuncCode), 
-		.ALUCtl(ALUCtl)
+		.ALUctl(ALUctl)
 	);
 
 	initial begin
@@ -26,6 +26,11 @@ module ALUControlTB;
 		#100;
         
 		// Add stimulus here
+		#100 FuncCode = 5'b100000;
+		#100 FuncCode = 5'b100010; 
+		#100 FuncCode = 5'b100100;
+		#100 FuncCode = 5'b100101; 
+		#100 FuncCode = 5'b101010;
 
 	end
       
