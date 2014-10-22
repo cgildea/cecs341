@@ -27,10 +27,10 @@ module Reg_ALU_ControlTB;
 	// Inputs
 	reg [1:0] ALUOp;
 	reg [5:0] FuncCode;
-	reg A;
-	reg B;
+	//reg A;
+	//reg B;
 	reg [4:0] Read1;
-	reg [4:0] Read2;
+	reg [4:0] Read2; 
 	reg [4:0] WriteReg;
 	reg [31:0] WriteData;
 	reg RegWrite;
@@ -53,42 +53,41 @@ module Reg_ALU_ControlTB;
 		.RegWrite(RegWrite), 
 		.clock(clock)
 	);
+	
+	always begin
+	#50 clock = ~clock;
+	end
 
 	initial begin
 		// Initialize Inputs
 		ALUOp = 0;
 		FuncCode = 0;
-		A = 0;
-		B = 0;
 		Read1 = 0;
 		Read2 = 0;
-		WriteReg = 0;
+		WriteReg = 0; 
 		WriteData = 0;
 		RegWrite = 0;
 		clock = 1;
+
+
 
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
-				// Add stimulus here
-		clock = 0;
 		RegWrite = 1;
 		WriteReg = 5;
 		WriteData = 32'h55555555;
 		#50
-		clock = 1;
-		Read1 = 5;
+		Read1 = 5; 
 		Read2 = 5;
 		#50
-		ALUOp = 2'b10;
+		ALUOp = 4'b0010;
 		FuncCode = 6'b100000;
-		clock = 0;
 		RegWrite = 0;
-		#50
-		clock = 1;
+
+
 
 	end
-      
 endmodule
 

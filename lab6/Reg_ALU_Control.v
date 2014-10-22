@@ -28,7 +28,7 @@ WriteReg, WriteData, RegWrite, clock);
 		clock;
 	
 	//ALU
-	wire [3:0] ALUctl;
+	wire [3:0] ALUCtl;
 	wire [31:0] A,B;
 	output[31:0] ALUOut;
 	output Zero;
@@ -38,8 +38,8 @@ WriteReg, WriteData, RegWrite, clock);
 	input [5:0] FuncCode;
 	
 	 
-	ALUControl ALUC (ALUOp, FuncCode, ALUCtl); 
-	ALU alu (ALUCtl, A, B, ALUOut, Zero); 
-	Register REG (Read1, Read2, WriteReg, WriteData, RegWrite, A, B, clock);
+	ALUControl ALUC (.ALUOp(ALUOp), .FuncCode(FuncCode), .ALUctl(ALUCtl)); 
+	ALU alu (.ALUctl(ALUCtl), .A(A), .B(B), .ALUOut(ALUOut), .Zero(Zero)); 
+	Register REG (.Read1(Read1), .Read2(Read2), .WriteReg(WriteReg), .WriteData(WriteData), .RegWrite(RegWrite), .Data1(A), .Data2(B), .clock(clock));
 
 endmodule

@@ -10,11 +10,9 @@ Analyzing Verilog file "C:/Users/User/dev/cecs341/lab6/Reg_ALU_Control.v" into l
 Analyzing Verilog file "C:/Users/User/dev/cecs341/lab6/Reg_ALU_ControlTB.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "C:/Users/User/dev/cecs341/lab6/Reg_ALU_Control.v" Line 41: Size mismatch in connection of port <ALUctl>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "C:/Users/User/dev/cecs341/lab6/Reg_ALU_Control.v" Line 42: Size mismatch in connection of port <ALUctl>. Formal port size is 4-bit while actual signal size is 1-bit.
 Completed static elaboration
 Fuse Memory Usage: 100568 KB
-Fuse CPU Usage: 280 ms
+Fuse CPU Usage: 300 ms
 Compiling module ALUControl
 Compiling module ALU
 Compiling module Register
