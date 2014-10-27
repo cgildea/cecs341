@@ -1,23 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    18:41:33 10/21/2014 
-// Design Name: 
-// Module Name:    Register 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module Register(Read1, Read2, WriteReg, WriteData, RegWrite, Data1, Data2, clock);
 	 
 	 input [4:0] Read1, Read2, WriteReg;
