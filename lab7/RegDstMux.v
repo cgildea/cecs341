@@ -1,14 +1,14 @@
 `timescale 1ns / 1ps
 
-module RegDstMux(
-    input [5:0] rt, rd,
-    input [1:0] Sel,
-    output reg [5:0] Out
+module Two2One_5b_mux(
+    input [4:0] In0, In1,
+    input 		 Sel,
+    output reg [4:0] Out
     );
-	always @(rt, rd, Sel)
+	always @(In0, In1, Sel)
 	case(Sel)
-	0: Out <=rt;
-	1: Out <=rd;
+	0: Out <=In0;
+	1: Out <=In1;
 	endcase
 
 

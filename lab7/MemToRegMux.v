@@ -1,14 +1,14 @@
 `timescale 1ns / 1ps
 
-module MemToRegMux(
-    input [31:0] ReadData, ALUOut,
-    input [1:0] Sel,
+module Two2One_32b_mux(
+    input [31:0] In0, In1,
+    input 		  Sel,
     output reg [31:0] Out
     );
-	always @(ReadData, ALUOut, Sel)
+	always @(In0, In1, Sel)
 	case(Sel)
-	0: Out <=ALUOut;
-	1: Out <=ReadData;
+	0: Out <=In0;
+	1: Out <=In1;
 	endcase
 
 
