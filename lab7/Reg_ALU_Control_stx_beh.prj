@@ -1,3 +1,4 @@
+verilog isim_temp "SignExtend.v"
 verilog isim_temp "RegDstMux.v"
 verilog isim_temp "MemToRegMux.v"
 verilog isim_temp "DataMemory.v"
