@@ -1,33 +1,32 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    20:20:21 10/23/2014 
-// Design Name: 
-// Module Name:    DataMemory 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module DataMemory(
 	 input [31:0] WriteData,
-	 input [7:0] Address,
-	 input clock,
+	 input [31:0] Address,
+	 input clock, 
 	 input MemWrite,
 	 input MemRead,
 	 output reg [31:0] ReadData
     );
 	 
 	reg [7:0] DM [0:255]; //DM - Data Memory denoting say, Hard Drive. 
+	
+		always @ (posedge clock) 
+	begin 
+		if (MemWrite ==1) 
+		begin
+			DM[Address[7:0] + 0] = WriteData [31:24]; 
+			DM[Address [7:0] + 1] = WriteData [23:16]; 
+			DM[Address [7:0] + 2] = WriteData [15:8]; 
+			DM[Address [7:0] + 3] = WriteData [7:0]; // This is "Big Endian" 
+		end
+	end
+		
+		always @ (MemRead, Address)
+		begin
+			if (MemRead ==1) 
+				 ReadData = {DM[Address[7:0] + 0], DM[Address[7:0] + 1], DM[Address[7:0] + 2], DM[Address[7:0] + 3]} ; 
+		end
 	
 	initial begin
 		DM[0] = 8'h00;
@@ -80,17 +79,5 @@ module DataMemory(
 		DM[47] = 8'hbb;
 		DM[48] = 8'hcc;
 		DM[49] = 8'hcc;
-	end
-
-	always @ (posedge clock) 
-	begin 
-		if (MemWrite ==1)  
-			DM[Address[7:0] + 0] = WriteData [31:24]; 
-			DM[Address [7:0] + 1] = WriteData [23:16]; 
-			DM[Address [7:0] + 2] = WriteData [15:8]; 
-			DM[Address [7:0] + 3] = WriteData [7:0]; // This is "Big Endian" 
-			
-		if (MemRead ==1) 
-			assign ReadData = {DM[Address[7:0] + 0], DM[Address[7:0] + 1], DM[Address[7:0] + 2], DM[Address[7:0] + 3]} ; 
 	end
 endmodule

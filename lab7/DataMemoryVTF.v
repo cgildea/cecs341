@@ -1,27 +1,5 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   20:44:48 10/23/2014
-// Design Name:   DataMemory
-// Module Name:   C:/Users/User/dev/cecs341/lab7/DataMemoryVTF.v
-// Project Name:  lab7
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: DataMemory
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 module DataMemoryVTF;
 
 	// Inputs
@@ -42,26 +20,60 @@ module DataMemoryVTF;
 		.MemWrite(MemWrite), 
 		.MemRead(MemRead), 
 		.ReadData(ReadData)
-	);
+	); 
 	
-	always begin
-		#50 clock = ~clock;
-	end
+	//always begin
+		//#50 clock = ~clock;
+//	end
 
 	initial begin
-		// Initialize Inputs
-		WriteData = 0;
-		Address = 0;
 		clock = 0;
-		MemWrite = 0;
 		MemRead = 0;
-		
+		MemWrite = 0;
+		Address = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-        
-		// Add stimulus here
-
+		
+		MemRead = 1; 
+		Address = 20;
+		#50
+		clock = 1;
+		#50
+		clock = 0;
+		Address = 40;
+		#50
+		clock = 1;
+		#50
+		clock = 0;
+		MemWrite = 1;
+		MemRead = 0;
+		Address = 20;
+		WriteData = 32'ha5a5a5a5;
+		#50
+		clock = 1;
+		#50
+		clock = 0;
+		MemRead = 1; 
+		MemWrite = 0;
+		#50
+		clock = 1;
+		#50
+		clock = 0;
+		MemRead = 0;
+		Address = 40;
+		MemWrite = 1;
+		WriteData = 32'h5a5a5a5a;
+		#50
+		clock = 1;
+		#50
+		clock = 0;
+		MemRead = 1;
+		MemWrite = 0;
+		#50
+		clock = 1;
+		#50
+		clock = 0;
 	end
       
 endmodule

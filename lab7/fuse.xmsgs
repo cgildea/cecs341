@@ -5,17 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/User/dev/cecs341/lab7/../lab6/Reg_ALU_Control.v" Line 60: Target &lt;<arg fmt="%s" index="1">Zero</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/User/dev/cecs341/lab7/../lab6/Reg_ALU_Control.v" Line 74: Target &lt;<arg fmt="%s" index="1">ReadData</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/User/dev/cecs341/lab7/../lab6/Reg_ALU_Control.v" Line 51: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">ALUOp</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/User/dev/cecs341/lab7/../lab6/Reg_ALU_Control.v" Line 64: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Address</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
-</msg>
-
 </messages>
 

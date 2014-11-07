@@ -12,5 +12,8 @@ module Register(Read1, Read2, WriteReg, WriteData, RegWrite, Data1, Data2, clock
 	always begin @(posedge clock)
 	 if(RegWrite == 1) RF[WriteReg] <= WriteData;
 	end
+	initial begin
+		RF[1] = 32'hFFFFFFFF;
+	end
 endmodule
 

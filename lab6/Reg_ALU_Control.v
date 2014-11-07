@@ -1,23 +1,21 @@
 
 `timescale 1ns / 1ps
  
-module Reg_ALU_Control(rs, rt, rd, immediate, FuncCode, RegDst, ALUSrc, ALUOp, MemWrite, MemRead, MemToReg, WriteData, RegWrite, clock, Zero, ReadData);
+module Reg_ALU_Control(rs, rt, rd, immediate, FuncCode, RegDst, ALUSrc, ALUOp, MemWrite, MemRead, MemToReg, RegWrite, clock, Zero);
 
 	
 	input        RegDst, ALUSrc, ALUOp, MemWrite, MemRead, MemToReg, RegWrite, clock; 
 	input [ 5:0] FuncCode;
 	input [ 4:0] rs, rt, rd;  // inputs to Reg
 	input [15:0] immediate;
-	input [31:0] WriteData;
+	//input [31:0] WriteData;
 
-	output reg        Zero;
-	output reg [31:0] ReadData;
-	
+	output reg        Zero;	
 	
 	
    wire [ 3:0] ALUCtl;
 	wire [ 4:0] writeReg;
-	wire [31:0] RegToMux2, RegToDM_WriteData, A, B, signExtend, ALUOut, DM_ReadDataToMux3;	
+	wire [31:0] RegToMux2, A, B, signExtend, ALUOut, DM_ReadDataToMux3, ReadData;	
 	
 	
 

@@ -15,7 +15,6 @@ module TopDownVTF;
 	reg MemRead;
 	reg MemToReg;
 	reg RegWrite;
-	reg [31:0] WriteData;
 	reg clock;
 
 	// Outputs
@@ -36,15 +35,13 @@ module TopDownVTF;
 		.MemRead(MemRead), 
 		.MemToReg(MemToReg), 
 		.RegWrite(RegWrite),
-		.WriteData(WriteData), 
 		.clock(clock), 
-		.Zero(Zero), 
-		.ReadData(ReadData)
+		.Zero(Zero)
 	);
 	
-	always begin
-		#50 clock = ~clock;
-	end
+//	always begin
+//		#50 clock = ~clock;
+//	end
 
 	initial begin
 		// Initialize Inputs
@@ -60,7 +57,6 @@ module TopDownVTF;
 		MemRead = 0;
 		MemToReg = 0;
 		RegWrite = 0;
-		WriteData = 0;
 		clock = 0;
 
 		// Wait 100 ns for global reset to finish
@@ -68,17 +64,15 @@ module TopDownVTF;
         
 		// Add stimulus here
 		
+		//Store Word
 		RegWrite = 1; 
 		rt = 5;
 		RegDst = 0;
-		WriteData = 32'h55555555; 
 		#50
 		rt = 10;
 		#50
-		WriteData = 32'haaaaaaaa; 
 		rt = 0;
 		#50
-		WriteData = 32'h00000000; 
 		rs = 5;
 		#50
 		#50
