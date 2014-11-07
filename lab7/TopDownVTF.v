@@ -19,7 +19,6 @@ module TopDownVTF;
 
 	// Outputs
 	wire Zero;
-	wire [31:0] ReadData;
 
 	// Instantiate the Unit Under Test (UUT)
 	Reg_ALU_Control uut (
@@ -63,19 +62,45 @@ module TopDownVTF;
 		#100;
         
 		// Add stimulus here
+		//Load word
+		clock = 1;
+		#50
+		clock = 0;
+		immediate = 16'h0014;
+		rs = 0;
+		ALUSrc = 1;
+		ALUOp = 2'b10;
+		FuncCode = 6'b000000;
+		rd = 5;
+		RegDst = 1;
+		RegWrite = 1;
+		#50
+		clock = 1; 
+		#50
+		clock = 0;
+		#50
+		clock = 1;
+		#50
+		clock = 0;
+		
+		
+		
 		
 		//Store Word
-		RegWrite = 1; 
-		rs = 1;
+		rs = 0;
 		clock = 1;
-		rt = 2;
+		rt = 1;
 		RegDst = 0;
-		immediate = 16'h0004;
+		immediate = 16'h0000;
 		ALUSrc = 1;
 		#50
 		MemWrite = 1;
+		MemRead = 1;
 		MemToReg = 1;
-		clock = 0;
+		clock = 0; 
+		#50
+		clock = 1;
+
 		
 		
 		

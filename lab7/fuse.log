@@ -1,36 +1,21 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/User/dev/cecs341/lab7/TopDownVTF_isim_beh.exe -prj C:/Users/User/dev/cecs341/lab7/TopDownVTF_beh.prj work.TopDownVTF work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/User/dev/cecs341/lab7/DataMemoryVTF_isim_beh.exe -prj C:/Users/User/dev/cecs341/lab7/DataMemoryVTF_beh.prj work.DataMemoryVTF work.glbl 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/User/dev/cecs341/lab7/SignExtend.v" into library work
-Analyzing Verilog file "C:/Users/User/dev/cecs341/lab7/RegDstMux.v" into library work
-Analyzing Verilog file "C:/Users/User/dev/cecs341/lab7/MemToRegMux.v" into library work
 Analyzing Verilog file "C:/Users/User/dev/cecs341/lab7/DataMemory.v" into library work
-Analyzing Verilog file "C:/Users/User/dev/cecs341/lab7/ALUControl.v" into library work
-Analyzing Verilog file "C:/Users/User/dev/cecs341/lab7/ALU.v" into library work
-Analyzing Verilog file "C:/Users/User/dev/cecs341/lab7/../lab6/Register.v" into library work
-Analyzing Verilog file "C:/Users/User/dev/cecs341/lab7/../lab6/Reg_ALU_Control.v" into library work
-Analyzing Verilog file "C:/Users/User/dev/cecs341/lab7/TopDownVTF.v" into library work
+Analyzing Verilog file "C:/Users/User/dev/cecs341/lab7/DataMemoryVTF.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:329 - "C:/Users/User/dev/cecs341/lab7/../lab6/Reg_ALU_Control.v" Line 58: Target <Zero> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:189 - "C:/Users/User/dev/cecs341/lab7/../lab6/Reg_ALU_Control.v" Line 49: Size mismatch in connection of port <ALUOp>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "C:/Users/User/dev/cecs341/lab7/DataMemoryVTF.v" Line 18: Size mismatch in connection of port <Address>. Formal port size is 32-bit while actual signal size is 8-bit.
 Completed static elaboration
-Fuse Memory Usage: 100824 KB
-Fuse CPU Usage: 320 ms
-Compiling module Two2One_5b_mux
-Compiling module Register
-Compiling module Two2One_32b_mux
-Compiling module SignExtend
-Compiling module ALUControl
-Compiling module ALU
+Fuse Memory Usage: 101144 KB
+Fuse CPU Usage: 300 ms
 Compiling module DataMemory
-Compiling module Reg_ALU_Control
-Compiling module TopDownVTF
+Compiling module DataMemoryVTF
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 10 Verilog Units
-Built simulation executable C:/Users/User/dev/cecs341/lab7/TopDownVTF_isim_beh.exe
-Fuse Memory Usage: 104392 KB
-Fuse CPU Usage: 370 ms
+Compiled 3 Verilog Units
+Built simulation executable C:/Users/User/dev/cecs341/lab7/DataMemoryVTF_isim_beh.exe
+Fuse Memory Usage: 104712 KB
+Fuse CPU Usage: 340 ms

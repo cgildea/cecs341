@@ -10,7 +10,7 @@ module Reg_ALU_Control(rs, rt, rd, immediate, FuncCode, RegDst, ALUSrc, ALUOp, M
 	input [15:0] immediate;
 	//input [31:0] WriteData;
 
-	output reg        Zero;	
+	output        Zero;	
 	
 	
    wire [ 3:0] ALUCtl;

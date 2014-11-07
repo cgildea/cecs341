@@ -1,11 +1,11 @@
 ISim log file
-Running: C:\Users\User\dev\cecs341\lab7\TopDownVTF_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/User/dev/cecs341/lab7/TopDownVTF_isim_beh.wdb 
+Running: C:\Users\User\dev\cecs341\lab7\DataMemoryVTF_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/User/dev/cecs341/lab7/DataMemoryVTF_isim_beh.wdb 
 ISim P.20131013 (signature 0x8ef4fb42)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
-WARNING: File "C:/Users/User/dev/cecs341/lab6/Reg_ALU_Control.v" Line 7.  For instance uut/ALUC/, width 2 of formal port ALUOp is not equal to width 1 of actual signal ALUOp.
+WARNING: File "C:/Users/User/dev/cecs341/lab7/DataMemoryVTF.v" Line 7.  For instance DataMemoryVTF/uut/, width 32 of formal port Address is not equal to width 8 of actual variable Address. 
 Time resolution is 1 ps
 # onerror resume
 # wave add /

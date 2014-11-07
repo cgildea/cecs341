@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/User/dev/cecs341/lab7/TopDownVTF_isim_beh.exe" -prj "C:/Users/User/dev/cecs341/lab7/TopDownVTF_beh.prj" "work.TopDownVTF" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/User/dev/cecs341/lab7/DataMemoryVTF_isim_beh.exe" -prj "C:/Users/User/dev/cecs341/lab7/DataMemoryVTF_beh.prj" "work.DataMemoryVTF" "work.glbl" 

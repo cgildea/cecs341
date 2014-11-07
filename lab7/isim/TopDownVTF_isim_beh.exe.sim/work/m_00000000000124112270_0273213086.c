@@ -23,6 +23,7 @@
 #endif
 static const char *ng0 = "C:/Users/User/dev/cecs341/lab6/Register.v";
 static int ng1[] = {1, 0};
+static unsigned int ng2[] = {4294967295U, 0U};
 
 
 
@@ -67,14 +68,14 @@ LAB2:    xsi_set_current_line(10, ng0);
     t12 = (t0 + 600U);
     t13 = *((char **)t12);
     xsi_vlog_generic_get_array_select_value(t5, 32, t4, t8, t11, 2, 1, t13, 5, 2);
-    t12 = (t0 + 2540);
+    t12 = (t0 + 2684);
     t14 = (t12 + 32U);
     t15 = *((char **)t14);
     t16 = (t15 + 40U);
     t17 = *((char **)t16);
     memcpy(t17, t5, 8);
     xsi_driver_vfirst_trans(t12, 0, 31);
-    t18 = (t0 + 2480);
+    t18 = (t0 + 2624);
     *((int *)t18) = 1;
 
 LAB1:    return;
@@ -121,14 +122,14 @@ LAB2:    xsi_set_current_line(11, ng0);
     t12 = (t0 + 692U);
     t13 = *((char **)t12);
     xsi_vlog_generic_get_array_select_value(t5, 32, t4, t8, t11, 2, 1, t13, 5, 2);
-    t12 = (t0 + 2576);
+    t12 = (t0 + 2720);
     t14 = (t12 + 32U);
     t15 = *((char **)t14);
     t16 = (t15 + 40U);
     t17 = *((char **)t16);
     memcpy(t17, t5, 8);
     xsi_driver_vfirst_trans(t12, 0, 31);
-    t18 = (t0 + 2488);
+    t18 = (t0 + 2632);
     *((int *)t18) = 1;
 
 LAB1:    return;
@@ -196,7 +197,7 @@ LAB3:    goto *t2;
 LAB2:    xsi_set_current_line(12, ng0);
 
 LAB4:    xsi_set_current_line(12, ng0);
-    t2 = (t0 + 2496);
+    t2 = (t0 + 2640);
     *((int *)t2) = 1;
     t3 = (t0 + 2312);
     *((char **)t3) = t2;
@@ -281,10 +282,69 @@ LAB13:    t46 = *((unsigned int *)t30);
 
 }
 
+static void Initial_15_3(char *t0)
+{
+    char t3[8];
+    char t4[8];
+    char *t1;
+    char *t2;
+    char *t5;
+    char *t6;
+    char *t7;
+    char *t8;
+    char *t9;
+    char *t10;
+    char *t11;
+    char *t12;
+    unsigned int t13;
+    int t14;
+    char *t15;
+    unsigned int t16;
+    int t17;
+    int t18;
+    unsigned int t19;
+    unsigned int t20;
+    int t21;
+    int t22;
+
+LAB0:    xsi_set_current_line(15, ng0);
+
+LAB2:    xsi_set_current_line(16, ng0);
+    t1 = ((char*)((ng2)));
+    t2 = (t0 + 1472);
+    t5 = (t0 + 1472);
+    t6 = (t5 + 44U);
+    t7 = *((char **)t6);
+    t8 = (t0 + 1472);
+    t9 = (t8 + 40U);
+    t10 = *((char **)t9);
+    t11 = ((char*)((ng1)));
+    xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
+    t12 = (t3 + 4);
+    t13 = *((unsigned int *)t12);
+    t14 = (!(t13));
+    t15 = (t4 + 4);
+    t16 = *((unsigned int *)t15);
+    t17 = (!(t16));
+    t18 = (t14 && t17);
+    if (t18 == 1)
+        goto LAB3;
+
+LAB4:
+LAB1:    return;
+LAB3:    t19 = *((unsigned int *)t3);
+    t20 = *((unsigned int *)t4);
+    t21 = (t19 - t20);
+    t22 = (t21 + 1);
+    xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t4), t22);
+    goto LAB4;
+
+}
+
 
 extern void work_m_00000000000124112270_0273213086_init()
 {
-	static char *pe[] = {(void *)Cont_10_0,(void *)Cont_11_1,(void *)Always_12_2};
+	static char *pe[] = {(void *)Cont_10_0,(void *)Cont_11_1,(void *)Always_12_2,(void *)Initial_15_3};
 	xsi_register_didat("work_m_00000000000124112270_0273213086", "isim/TopDownVTF_isim_beh.exe.sim/work/m_00000000000124112270_0273213086.didat");
 	xsi_register_executes(pe);
 }

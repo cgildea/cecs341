@@ -1,0 +1,29 @@
+Command line:
+   DataMemoryVTF_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49377
+
+Thu Nov 06 21:26:17 2014
+
+
+ Elaboration Time: 0.040058 sec
+
+ Current Memory Usage: 652.734 Meg
+
+ Total Signals          : 19
+ Total Nets             : 112
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 16
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 2315
+Total Line Count : 122
+
+ Total Simulation Time: 0.060087 sec
+
+ Current Memory Usage: 652.734 Meg
+
+Thu Nov 06 21:26:38 2014
+

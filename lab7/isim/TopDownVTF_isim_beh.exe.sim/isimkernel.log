@@ -2,28 +2,28 @@ Command line:
    TopDownVTF_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49257
+     -socket  49366
 
-Thu Nov 06 20:26:17 2014
+Thu Nov 06 21:23:16 2014
 
 
- Elaboration Time: 0.050072 sec
+ Elaboration Time: 0.030043 sec
 
- Current Memory Usage: 651.952 Meg
+ Current Memory Usage: 652.218 Meg
 
  Total Signals          : 66
- Total Nets             : 326
- Total Signal Drivers   : 30
+ Total Nets             : 293
+ Total Signal Drivers   : 28
  Total Blocks           : 11
  Total Primitive Blocks : 9
- Total Processes        : 44
- Total Traceable Variables  : 41
- Total Scalar Nets and Variables : 3693
-Total Line Count : 153
+ Total Processes        : 42
+ Total Traceable Variables  : 40
+ Total Scalar Nets and Variables : 3659
+Total Line Count : 162
 
- Total Simulation Time: 0.200287 sec
+ Total Simulation Time: 0.130188 sec
 
- Current Memory Usage: 653.001 Meg
+ Current Memory Usage: 966.791 Meg
 
-Thu Nov 06 20:45:51 2014
+Thu Nov 06 21:24:17 2014
 
