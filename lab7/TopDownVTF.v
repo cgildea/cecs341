@@ -66,28 +66,39 @@ module TopDownVTF;
 		
 		//Store Word
 		RegWrite = 1; 
-		rt = 5;
+		rs = 1;
+		clock = 1;
+		rt = 2;
 		RegDst = 0;
-		#50
-		rt = 10;
-		#50
-		rt = 0;
-		#50
-		rs = 5;
-		#50
-		#50
-		RegWrite = 0;
-		#50
-		immediate = 16'h0014;
-		rs = 0;
+		immediate = 16'h0004;
 		ALUSrc = 1;
-		ALUOp = 2'b10;
-		FuncCode = 6'b000000;
-		rd = 5;
-		RegDst = 1;
-		RegWrite = 1;
-		#50  
-		rs = 0;
+		#50
+		MemWrite = 1;
+		MemToReg = 1;
+		clock = 0;
+		
+		
+		
+		//#50
+		//rt = 10;
+		//#50
+		//rt = 0;
+		//#50
+		//rs = 5;
+		//#50
+		//#50
+		//RegWrite = 0;
+		//#50
+		//immediate = 16'h0014;
+		//rs = 0;
+		//ALUSrc = 1;
+		//ALUOp = 2'b10;
+		//FuncCode = 6'b000000;
+		//rd = 5;
+		//RegDst = 1;
+		//RegWrite = 1;
+		//#50  
+		//rs = 0;
 	end
       
 endmodule
